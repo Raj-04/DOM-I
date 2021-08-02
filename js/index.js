@@ -40,3 +40,55 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const options = siteContent["nav"]
+const optionsArr = Object.values(options);
+const links = document.querySelectorAll('a')
+
+for (let x = 0; x < 5; x++) {
+  links[x].textContent = optionsArr[x];
+}
+
+const awesome = document.querySelector('.cta-text')
+awesome.children[0].textContent = siteContent['cta']['h1']
+awesome.children[1].textContent = siteContent['cta']['button']
+
+const codeImage = document.querySelector('#cta-img')
+codeImage.setAttribute('src', siteContent["cta"]["img-src"])
+const codeImage2 = document.querySelector('#middle-img')
+codeImage2.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+const topContent = document.querySelector('.top-content')
+const features = topContent.children[0];
+features.children[0].textContent = siteContent['main-content']['features-h4']
+features.children[1].textContent = siteContent['main-content']['features-content']
+
+const about = topContent.children[1];
+about.children[0].textContent = siteContent['main-content']['about-h4']
+about.children[1].textContent = siteContent['main-content']['about-content']
+
+const bottomContent = document.querySelector('.bottom-content');
+
+const services = bottomContent.children[0];
+services.children[0].textContent = siteContent['main-content']['services-h4']
+services.children[1].textContent = siteContent['main-content']['services-content']
+
+
+const product = bottomContent.children[1];
+product.children[0].textContent = siteContent['main-content']['product-h4']
+product.children[1].textContent = siteContent['main-content']['product-content']
+
+
+const vision = bottomContent.children[2];
+vision.children[0].textContent = siteContent['main-content']['vision-h4']
+vision.children[1].textContent = siteContent['main-content']['vision-content']
+
+const contact = document.querySelector('.contact');
+contact.children[0].textContent = siteContent['contact']['contact-h4']
+contact.children[1].textContent = siteContent['contact']['address']
+contact.children[2].textContent = siteContent['contact']['phone']
+contact.children[3].textContent = siteContent['contact']['email']
+
+const footer = document.querySelector('footer').children[0]
+footer.textContent = siteContent['footer']['copyright']
+
